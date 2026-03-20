@@ -88,7 +88,7 @@ function calcularTransporte() {
 
     valorFinal = valorTransporte * quantosdiasInput.value
 
-    resultadoDiv.textContent = `Valor total do transporte: R$ ${valorTransporte.toFixed(2)}`
+    resultadoDiv.textContent = `Valor total do transporte: R$ ${valorFinal.toFixed(2)}`
 
      
 
