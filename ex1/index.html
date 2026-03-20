@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Horas Extras</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="bg-slate-50 min-h-screen font-sans text-slate-900">
+
+    <div class="max-w-5xl mx-auto px-4 py-12">
+        <header class="text-center mb-10">
+            <h1 class="text-3xl font-bold text-blue-700">Calculadora de Horas Extras</h1>
+            <p class="text-slate-500 mt-2">Desenvolvido por João Pedro</p>
+        </header>
+
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+            
+            <div class="lg:col-span-1 bg-white p-6 rounded-2xl shadow-sm border border-slate-200">
+                <h2 class="text-xl font-semibold mb-6 flex items-center gap-2">
+                    <i class="fa-solid fa-calculator text-blue-600"></i> Novo Cálculo
+                </h2>
+                
+                <div class="space-y-4">
+                    <div>
+                        <label class="block text-sm font-medium text-slate-700 mb-1">Salário Bruto (R$)</label>
+                        <input type="number" id="salariobruto" placeholder="Ex: 3000" 
+                            class="w-full px-4 py-2 rounded-lg border border-slate-300 focus:ring-2 focus:ring-blue-500 focus:outline-none transition">
+                    </div>
+
+                    <div>
+                        <label class="block text-sm font-medium text-slate-700 mb-1">Horas Extras</label>
+                        <input type="number" id="horas" placeholder="Qtd. de horas" 
+                            class="w-full px-4 py-2 rounded-lg border border-slate-300 focus:ring-2 focus:ring-blue-500 focus:outline-none transition">
+                    </div>
+
+                    <div>
+                        <label class="block text-sm font-medium text-slate-700 mb-1">Horas Extras FDS</label>
+                        <input type="number" id="horasextrasfds" placeholder="Qtd. de horas" 
+                            class="w-full px-4 py-2 rounded-lg border border-slate-300 focus:ring-2 focus:ring-blue-500 focus:outline-none transition">
+                    </div>
+
+                    <button id="calcular" 
+                        class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 rounded-lg transition-all shadow-md active:scale-[0.98] mt-4">
+                        Calcular Total
+                    </button>
+                </div>
+
+                <div id="resultado" class="mt-6 p-4 rounded-lg bg-blue-50 text-blue-800 font-medium text-center border border-blue-100 min-h-[50px] flex items-center justify-center">
+                    Aguardando dados...
+                </div>
+            </div>
+
+            <div class="lg:col-span-2 bg-white p-6 rounded-2xl shadow-sm border border-slate-200">
+                <div class="flex justify-between items-center mb-6">
+                    <h2 class="text-xl font-semibold flex items-center gap-2">
+                        <i class="fa-solid fa-clock-rotate-left text-slate-600"></i> Histórico de Operações
+                    </h2>
+                    <button id="limparHistorico" class="text-sm text-red-500 hover:text-red-700 font-medium flex items-center gap-1 transition">
+                        <i class="fa-solid fa-trash-can"></i> Limpar Tudo
+                    </button>
+                </div>
+
+                <div class="overflow-y-auto max-h-[450px] pr-2">
+                    <ul id="historico" class="space-y-3">
+                        </ul>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
