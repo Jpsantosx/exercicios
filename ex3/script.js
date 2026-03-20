@@ -6,6 +6,7 @@
 
 // 1. Selecionar os elementos (Adicionei o que faltava)
 const contidadeFuncionariosInput = document.getElementById('contidadeFuncionarios');
+const quantosdiasInput = document.getElementById('quantosdias');
 const calcularBtn = document.getElementById('calcular');
 const resultadoDiv = document.getElementById('resultado');
 const historico = document.getElementById('historico');
@@ -84,10 +85,15 @@ function calcularTransporte() {
     } else if (quantidadeFuncionarios => 150) {
         valorTransporte = quantidadeFuncionarios * 3,50}
 
+
+    valorFinal = valorTransporte * quantosdiasInput.value
+
     resultadoDiv.textContent = `Valor total do transporte: R$ ${valorTransporte.toFixed(2)}`
 
+     
+
     // Adicionar a operação ao histórico
-    const operacao = `Quantidade de funcionários: ${quantidadeFuncionarios} - Valor do transporte: R$ ${valorTransporte.toFixed(2)}`
+    const operacao = `Quantidade de funcionários: ${quantidadeFuncionarios} - Valor do transporte: R$ ${valorTransporte.toFixed(2)} - quantidade de dias: ${quantosdiasInput.value} - valor final: R$ ${valorFinal.toFixed(2)}`
     adicionarAoHistorico(operacao)
 }
 
