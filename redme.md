@@ -52,8 +52,12 @@ Conjunto de exercícios práticos em frontend usando HTML, CSS e JavaScript para
   - `script.js` (cálculo de transporte + localStorage + relógio)
 
 ## Autores
-- João Pedro - GitHub: `joaopedro` - `joaopedrostadlerroza.senai@gmail.com.br`
+- João Pedro - GitHub: `Jpsantosx` - `joaopedrostadlerroza.senai@gmail.com.br`
 
+## Repositório do Projeto
+https://github.com/Jpsantosx/exercicios.git
+
+## Link do Projeto
 https://exercicios-zeta.vercel.app/
 
 ## Licença
