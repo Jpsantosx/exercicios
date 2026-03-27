@@ -1,10 +1,10 @@
 # Curso Técnico de Desenvolvimento de Sistemas - Senai Itapeva
 
 ## Nome do Projeto
-Exercícios de Front-end - HTML/CSS/JS
+Central de Serviços RH
 
 **Descrição:**
-Conjunto de exercícios práticos em frontend usando HTML, CSS e JavaScript para cálculo e armazenamento local (localStorage). Inclui controle de formulários, histórico de operações e clock em tempo real.
+Conjunto de exercícios práticos em frontend usando HTML, tailwind CSS e JavaScript para cálculo e armazenamento local (localStorage). Inclui controle de formulários, histórico de operações e clock em tempo real.
 
 ## Índice
 - Funcionalidades
