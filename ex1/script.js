@@ -18,6 +18,8 @@ const historico = document.getElementById('historico')
 // Array principal que armazenará o histórico de operações
 let historicoOperacoes = []
 
+
+
 // -------------------------------
 // 2. Carregar histórico de operações salvos no navegador (localStorage)
 // -------------------------------
@@ -48,8 +50,7 @@ function adicionarAoHistorico(operacao) {
 // -------------------------------
 // 5. Função para atualizar a exibição do histórico na página.
 // -------------------------------
-// Estrutura de repetição forEach para percorrer o array de operações e criar elementos <li> para cada operação, exibindo-as na lista do histórico.
-// Função arrow function para gerar o conteúdo de cada item do histórico de forma concisa e clara.
+
 function atualizarHistorico() {
     historico.innerHTML = ''
     historicoOperacoes.forEach( (operacao) => {
@@ -67,9 +68,27 @@ limparHistoricoBtn.addEventListener('click', () => {
     atualizarHistorico()
 })
 
+
+// hora atual 
+
+function atualizarRelogio() {
+
+    const agora = new Date();
+
+    const dataFormatada = agora.toLocaleDateString('pt-BR');
+
+    const horaFormatada = agora.toLocaleTimeString('pt-BR');
+
+    const elementoDataHora = document.getElementById('relogio-digital');
+
+    elementoDataHora.innerHTML = `${dataFormatada} ${horaFormatada}`;
+}
+
+
 // -------------------------------
 // 6. Função para calcular o valor das horas extras
 // -------------------------------
+
 
 function calcularHorasExtras() {
     const salariobruto = parseFloat(salariobrutoInput.value)
@@ -92,10 +111,13 @@ function calcularHorasExtras() {
     adicionarAoHistorico(operacao)
 }
 
-// --------------------------------
 
 // 7. Adicionar evento de clique ao botão de calcular   
 calcularBtn.addEventListener('click', calcularHorasExtras)
 
 // 8. Carregar o histórico de operações ao iniciar a página
 carregarHistorico()
+
+// 9. Atualizar o relógio digital a cada segundo
+atualizarRelogio() // Chamada inicial para exibir o relógio imediatamente ao carregar a página
+setInterval(atualizarRelogio, 1000)

@@ -9,6 +9,10 @@
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap');
         body { font-family: 'Inter', sans-serif; background-color: #ffffff; }
+        
+        /* Animação para o relógio */
+        .blink { animation: blinker 1s linear infinite; }
+        @keyframes blinker { 50% { opacity: 0; } }
     </style>
 </head>
 <body class="text-slate-900 py-10 px-4">
@@ -20,6 +24,10 @@
             </div>
             <h1 class="text-4xl font-black text-slate-900 tracking-tight">Cálculo de Transporte</h1>
             <p class="text-orange-600 font-bold uppercase tracking-widest text-sm mt-2">Autor: João Pedro</p>
+            
+            <div id="relogio-digital" class="mt-4 text-sm font-mono text-slate-500 bg-slate-50 inline-block px-6 py-2 rounded-full border-2 border-slate-100 shadow-inner">
+                00:00:00
+            </div>
         </header>
 
         <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -59,12 +67,11 @@
                     </button>
                 </div>
 
-                <div class="bg-slate-50 border-2 border-slate-100 rounded-[2.5rem] p-4 flex-1 overflow-hidden">
-                    <ul id="historico" class="space-y-3 max-h-[450px] overflow-y-auto pr-2 custom-scrollbar">
+                <div class="bg-slate-50 border-2 border-slate-100 rounded-[2.5rem] p-4 flex-1">
+                    <ul id="historico" class="space-y-3 max-h-[400px] overflow-y-auto pr-2">
                         </ul>
                 </div>
             </section>
-
         </div>
     </div>
     <script src="script.js"></script>

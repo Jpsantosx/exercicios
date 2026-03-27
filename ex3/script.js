@@ -42,11 +42,8 @@ function adicionarAoHistorico(operacao) {
     atualizarHistorico()
 }
 
-// -------------------------------
-// 5. Função para atualizar a exibição do histórico na página.
-// -------------------------------
-// Estrutura de repetição forEach para percorrer o array de operações e criar elementos <li> para cada operação, exibindo-as na lista do histórico.
-// Função arrow function para gerar o conteúdo de cada item do histórico de forma concisa e clara.
+
+
 function atualizarHistorico() {
     historico.innerHTML = ''
     historicoOperacoes.forEach( (operacao) => {
@@ -63,6 +60,26 @@ limparHistoricoBtn.addEventListener('click', () => {
     salvarHistorico()
     atualizarHistorico()
 })
+
+//hora atual
+
+function atualizarRelogio() {
+
+    const agora = new Date();
+
+    const dataFormatada = agora.toLocaleDateString('pt-BR');
+
+    const horaFormatada = agora.toLocaleTimeString('pt-BR');
+
+    const elementoDataHora = document.getElementById('relogio-digital');
+
+    elementoDataHora.innerHTML = `${dataFormatada} ${horaFormatada}`;
+}
+
+
+
+
+
 
 // calcular o valor do transporte
 function calcularTransporte() {
@@ -99,6 +116,11 @@ function calcularTransporte() {
 
 // Evento de clique para calcular o transporte
 calcularBtn.addEventListener('click', calcularTransporte)
+
+
+atualizarRelogio() // Chamada inicial para exibir o relógio imediatamente ao carregar a página
+setInterval(atualizarRelogio, 1000)
+
 
 
 

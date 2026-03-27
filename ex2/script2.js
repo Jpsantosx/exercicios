@@ -17,6 +17,10 @@ let historicoOperacoes = [];
 // -------------------------------
 // 2. Carregar histórico de operações salvos no navegador (localStorage)
 // -------------------------------
+
+
+
+
 function carregarHistorico() {
     const historicoSalvo = localStorage.getItem('historicoOperacoes')
     if (historicoSalvo) {
@@ -44,8 +48,7 @@ function adicionarAoHistorico(operacao) {
 // -------------------------------
 // 5. Função para atualizar a exibição do histórico na página.
 // -------------------------------
-// Estrutura de repetição forEach para percorrer o array de operações e criar elementos <li> para cada operação, exibindo-as na lista do histórico.
-// Função arrow function para gerar o conteúdo de cada item do histórico de forma concisa e clara.
+
 function atualizarHistorico() {
     historico.innerHTML = ''
     historicoOperacoes.forEach( (operacao) => {
@@ -62,6 +65,25 @@ limparHistoricoBtn.addEventListener('click', () => {
     salvarHistorico()
     atualizarHistorico()
 })
+
+//hora atual
+function atualizarRelogio() {
+
+    const agora = new Date();
+
+    const dataFormatada = agora.toLocaleDateString('pt-BR');
+
+    const horaFormatada = agora.toLocaleTimeString('pt-BR');
+
+    const elementoDataHora = document.getElementById('relogio-digital');
+
+    elementoDataHora.innerHTML = `${dataFormatada} ${horaFormatada}`;
+}
+
+
+
+
+
 
 // calcular o aumento de salário
 
@@ -97,3 +119,6 @@ function calcularAumento() {
 
 calcularBtn.addEventListener('click', calcularAumento);
 carregarHistorico();
+
+atualizarRelogio() // Chamada inicial para exibir o relógio imediatamente ao carregar a página
+setInterval(atualizarRelogio, 1000)
