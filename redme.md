@@ -56,22 +56,6 @@ Conjunto de exercícios práticos em frontend usando HTML, tailwind CSS e JavaSc
 
 
 
-
-
-
-
-
-## Imagens / Screenshots
-Abaixo estão exemplos de visualização para cada exercício (substitua pelos seus arquivos de imagem reais):
-
-- `ex1`: `ex1/screenshot-ex1.png`
-- `ex2`: `ex2/screenshot-ex2.png`
-- `ex3`: `ex3/screenshot-ex3.png`
-
-![Ex1 - Horas Extras](ex1/screenshot-ex1.png)
-![Ex2 - Aumento de Salário](ex2/screenshot-ex2.png)
-![Ex3 - Transporte de Colaboradores](ex3/screenshot-ex3.png)
-
 ## Repositório do Projeto
 https://github.com/Jpsantosx/exercicios.git
 
