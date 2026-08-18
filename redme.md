@@ -64,3 +64,11 @@ https://exercicios-zeta.vercel.app/
 
 ## Licença
 Este projeto está licenciado sob MIT.
+
+---
+
+## Autor
+
+Desenvolvido por **João Pedro Stadler**.
+
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-João_Pedro_Stadler-0A66C2?style=flat&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/jo%C3%A3o-pedro-stadler-6ab4583b6/)
